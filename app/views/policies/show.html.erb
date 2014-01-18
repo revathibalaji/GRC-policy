@@ -1,0 +1,43 @@
+<%= render partial: "layouts/header"%> 
+<center>
+<div class="container">
+<div class="span9 offset well">
+<p id="notice"><%= notice %></p>
+
+<table border="0">
+  <tr><td><strong>Policy name:</strong></td>
+  <td><%= @policy.p_name %></td></tr>
+<tr><td>&nbsp;&nbsp;</td></tr>
+
+<tr><td><strong>Poilct reference:</strong></td>
+  <td><%= @policy.p_ref %></td></tr>
+  <tr><td>&nbsp;&nbsp;</td></tr>
+
+<tr><td><strong>Control name:</strong></td>
+  <td><%= @policy.c_name %></td></tr>
+  <tr><td>&nbsp;&nbsp;</td></tr>
+
+  <tr><td><strong>Control reference:</strong></td>
+  <td><%= @policy.c_ref %></td></tr>
+  <tr><td>&nbsp;&nbsp;</td></tr>
+
+  <tr><td><strong>Scope:</strong></td>
+  <td><%= @policy.scope %></td></tr>
+  <tr><td>&nbsp;&nbsp;</td></tr>
+
+  <tr><td><strong>Objectives:</strong></td>
+  <td><%= @policy.objectives %></td></tr>
+  <tr><td>&nbsp;&nbsp;</td></tr>
+  </table>
+  <p>
+  <b> File attached </b></a>
+  <br/>
+</p>
+
+<p>
+<%= link_to 'Edit', edit_policy_path(@policy), :class=>"btn btn-info" %>&nbsp;&nbsp;
+<%= link_to "Report", policy_path(@policy, format: "pdf"), :class=>"btn btn-info"%>&nbsp;&nbsp;
+<%= link_to 'Back', policies_path, :class=>"btn btn-info" %>
+</p>
+</div>
+</div></center>

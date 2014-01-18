@@ -1,0 +1,32 @@
+<%= render partial: "layouts/header"%> 
+<center>
+<h4><i>Existing policies</i></h4>
+<br><br>
+<table border="2">
+  <thead>
+    <tr>
+      <th>Policy name</th>
+      <th>Policy reference</th>
+      <th>Control name</th>
+      <th>Control reference</th>      
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @policies.each do |policy| %>
+      <tr>
+        <td><%= policy.p_name %></td>
+        <td><%= policy.p_ref %></td>
+        <td><%= policy.c_name %></td>
+        <td><%= policy.c_ref %></td>        
+        <td><%= link_to 'Show', policy %>&nbsp;&nbsp;
+        <%= link_to 'Edit', edit_policy_path(policy) %>&nbsp;&nbsp;
+        <%= link_to 'Destroy', policy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<a class="btn btn-success" href="policies/new">New Policy</a>
+</center>
+</div>

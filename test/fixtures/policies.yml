@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  p_name: MyString
+  p_ref: MyString
+  c_name: MyString
+  c_ref: MyString
+  scope: MyString
+  objectives: MyString
+
+two:
+  p_name: MyString
+  p_ref: MyString
+  c_name: MyString
+  c_ref: MyString
+  scope: MyString
+  objectives: MyString
